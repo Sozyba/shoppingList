@@ -15,6 +15,7 @@ import com.google.android.gms.tasks.Tasks;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.auth.UserProfileChangeRequest;
 
 public class signup extends AppCompatActivity {
     private EditText Name;
@@ -48,15 +49,15 @@ private void dataHandler()
     String stPassword=Password.getText().toString();
     String stRepassword=Repassword.getText().toString();
     boolean isOk=true;
-    if (stEmail.length()==0) || stEmail.indexOf('@')<1)
+    if( (stEmail.length()==0) || stEmail.indexOf('@')<1)
     {
-        stEmail.setError("Wrong Email");
+        Email.setError("wrong email");
         isOk=false;
 
     }
-    if (stPassword.length()<8) || stPassword.equals(stRepassword)==false)
+    if ((stPassword.length()<8) || stPassword.equals(stRepassword)==false)
     {
-        stPassword.setError("Bad Password");
+        Password.setError("Bad Password");
         isOk=false;
 
     }
@@ -92,3 +93,7 @@ if(user!= null){
 
     }
 private  void updateUserProfile(FirebaseUser user)
+{
+UserProfileChangeRequest.Builder builder=new UserProfileChangeRequest.Builder();
+  builder.setDisplayName()
+}
