@@ -7,7 +7,7 @@
     tools:context="com.badran.suzan.shoppinglist.MainActivity">
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/etEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -27,7 +27,7 @@
         tools:layout_editor_absoluteY="123dp" />
 
     <Button
-        android:id="@+id/etEmail"
+        android:id="@+id/btnLog"
         android:layout_width="293dp"
         android:layout_height="53dp"
         android:text="Button"

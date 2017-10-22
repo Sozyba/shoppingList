@@ -19,7 +19,9 @@
         <activity
             android:name=".MainList2Activity"
             android:label="@string/title_activity_main_list2"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".AddItem" />
+        <activity android:name=".mainlistfragments.signup"></activity>
     </application>
 
 </manifest>

@@ -3,4 +3,15 @@
     <string name="title_activity_main_list2">MainList2Activity</string>
     <string name="action_settings">Settings</string>
     <string name="section_format">Hello World from section: %1$d</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="ItemName" />
+    <string name="ItemPrice" />
+    <string name="ItemUnits" />
+    <string name="etName">Name</string>
+    <string name="etEmail">Email</string>
+    <string name="etPassword">Password</string>
+    <string name="etRepassword">Repassword</string>
+    <string name="btnSave">Save</string>
 </resources>
