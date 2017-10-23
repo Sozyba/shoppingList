@@ -42,6 +42,9 @@ public class Login extends AppCompatActivity {
         firebaseUser = auth.getCurrentUser();
     }
     private void dataHandler()
+    {
+
+    }
     private  void signIn(String email, String Password){
         auth.signInWithEmailAndPassword(email, Password).addOnCompleteListener(Login.this, new OnCompleteListener<AuthResult>() {
             @Override
