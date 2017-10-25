@@ -7,6 +7,10 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.ImageButton;
+import android.widget.ListView;
+import android.widget.TextView;
 
 
 /**
@@ -26,6 +30,12 @@ public class CurrentListFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+
+    //1
+    private TextView tvTotal,tvTotalValue,tvCount,tvCountValue;
+    private ImageButton imbSave;
+    private ListView lstCurrent;
+
 
     private OnFragmentInteractionListener mListener;
 
@@ -61,11 +71,26 @@ public class CurrentListFragment extends Fragment {
     }
 
     @Override
+    //3.
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_current_list, container, false);
+        View view= inflater.inflate(R.layout.fragment_history_list, container, false);
+        //5.
+        tvTotal= (TextView) view.findViewById(R.id.tvTotal);
+        tvTotalValue= (TextView) view.findViewById(R.id.tvTotalValue);
+        tvCount=(TextView) view.findViewById(R.id.tvCount);
+        tvCountValue= (TextView) view.findViewById(R.id.tvCountValue);
+        imbSave= (ImageButton) view.findViewById(R.id.imbSave);
+        lstCurrent=(ListView) view.findViewById(R.id.lstvCurrent);
+
+        String[] ar={"suzan","adham","adam","amani"};
+        ArrayAdapter<String> arrayAdapter=
+                new ArrayAdapter<String>(this,)
+        //4.
+        return view;
     }
+
 
     // TODO: Rename method, update argument and hook method into UI event
     public void onButtonPressed(Uri uri) {
