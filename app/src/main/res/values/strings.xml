@@ -14,4 +14,8 @@
     <string name="etPassword">Password</string>
     <string name="etRepassword">Repassword</string>
     <string name="btnSave">Save</string>
+    <string name="total">tvTotal</string>
+    <string name="tvTotalValue">0</string>
+    <string name="tvCount">count</string>
+    <string name="tvCountValue">0</string>
 </resources>
