@@ -8,6 +8,7 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
+import com.badran.suzan.shoppinglist.data.Product;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
@@ -52,11 +53,11 @@ public class AddItem extends AppCompatActivity {
         double price = Double.parseDouble(stprice);
 
         //4.building data objects
-        //Product p=new Product();
-        //p.setName(stname);
-        //p.setAmount(amount);
-        //p.setPrice(price);
-        //p.setCompleted(false);
+        Product p=new Product();
+        p.setName(stname);
+        p.setAmount(amount);
+        p.setPrice(price);
+        p.setCompleted(false);
 
 
         //5.to get user emails...user info
