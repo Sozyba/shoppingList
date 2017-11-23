@@ -1,4 +1,4 @@
-package layout;
+package com.badran.suzan.shoppinglist.mainlistfragments;
 
 
 import android.os.Bundle;
@@ -6,18 +6,16 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ListView;
 
 import com.badran.suzan.shoppinglist.R;
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class HistoryFragment extends Fragment {
-    private ListView lstHistory;
+public class CurrentListFragment extends Fragment {
 
 
-    public HistoryFragment() {
+    public CurrentListFragment() {
         // Required empty public constructor
     }
 
@@ -26,7 +24,7 @@ public class HistoryFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_current, container, false);
+        return inflater.inflate(R.layout.fragment_history_list, container, false);
     }
 
 }

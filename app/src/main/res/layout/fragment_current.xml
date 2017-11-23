@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:visibility="visible"
-    tools:context="layout.HistoryFragment">
+    tools:context=".mainlistfragments.HistoryFragment">
 
     <!-- TODO: Update blank fragment layout -->
 

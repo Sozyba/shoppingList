@@ -20,7 +20,7 @@ import android.view.ViewGroup;
 
 import android.widget.TextView;
 
-import layout.HistoryFragment;
+import com.badran.suzan.shoppinglist.mainlistfragments.HistoryFragment;
 
    public class MainList2Activity extends AppCompatActivity {
 
