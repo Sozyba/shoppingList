@@ -49,6 +49,8 @@ public class Login extends AppCompatActivity {
         auth.signInWithEmailAndPassword(email, Password).addOnCompleteListener(Login.this, new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
+
+
                 if (task.isSuccessful()) {
                     Toast.makeText(Login.this, "singIn Successful.", Toast.LENGTH_SHORT).show();
                     finish();
