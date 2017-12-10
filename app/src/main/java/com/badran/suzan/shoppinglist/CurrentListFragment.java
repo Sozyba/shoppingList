@@ -4,6 +4,7 @@ import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +12,15 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.TextView;
+
+import com.badran.suzan.shoppinglist.data.Product;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 
 /**
@@ -86,10 +96,45 @@ public class CurrentListFragment extends Fragment {
 
         String[] ar={"suzan","adham","adam","amani"};
        //rrayAdapter<String> arrayAdapter=new ArrayAdapter<String>(this,)
+        readAndListen();
         //4.
         return view;
     }
+//read and listen data from firebase
+    private void readAndListen()
+    {
+        //5.to get user emails...user info
+        //to get user emaill...user info
+        FirebaseAuth auth = FirebaseAuth.getInstance();
+        FirebaseUser user = auth.getCurrentUser();
+        String email = user.getEmail();
+        email = email.replace('.', '*');
 
+        //6.bulding data refernce = data path= ata address
+        DatabaseReference reference;
+        reference = FirebaseDatabase.getInstance().getReference();
+
+        //7
+        reference.child(email).child("myList").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot)
+            {
+                for (DataSnapshot ds:dataSnapshot.getChildren())
+                {
+
+                    Product p=ds.getValue(Product.class);
+                    Log.d("LS",p.toString());
+
+                }
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError)
+            {
+
+            }
+        });
+    }
 
     // TODO: Rename method, update argument and hook method into UI event
     public void onButtonPressed(Uri uri) {

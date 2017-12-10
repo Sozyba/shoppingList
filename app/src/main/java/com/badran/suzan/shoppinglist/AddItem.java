@@ -87,6 +87,7 @@ public class AddItem extends AppCompatActivity {
 
 
 
+
         //todo Testing
         reference.child("List").setPriority("soso");
     }
