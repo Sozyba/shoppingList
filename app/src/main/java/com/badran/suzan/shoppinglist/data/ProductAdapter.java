@@ -41,6 +41,6 @@ public class ProductAdapter extends ArrayAdapter<Product>
         return super.getView(position, convertView, parent);
         View view= LayoutInflater.from(getContext()).inflate(R.layout.product_item,parent,false);
 
-        return view
+        return View;
     }
 }
