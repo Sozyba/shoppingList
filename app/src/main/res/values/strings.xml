@@ -18,4 +18,5 @@
     <string name="tvTotalValue">0</string>
     <string name="tvCount">count</string>
     <string name="tvCountValue">0</string>
+    <string name="iscompleted">Is Completed</string>
 </resources>
